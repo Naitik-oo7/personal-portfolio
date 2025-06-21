@@ -51,6 +51,7 @@ export default function Portfolio() {
   const { scrollY } = useScroll();
   const heroOpacity = useTransform(scrollY, [0, 300], [1, 0]);
   const heroScale = useTransform(scrollY, [0, 300], [1, 0.8]);
+  const arrowOpacity = useTransform(scrollY, [0, 150], [1, 0]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -349,15 +350,12 @@ export default function Portfolio() {
               Contact Me
             </Button>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <ArrowDown className="h-6 w-6 animate-bounce text-teal-500 dark:text-teal-400" />
-          </motion.div>
+        </motion.div>
+        <motion.div
+          style={{ opacity: arrowOpacity }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
+          <ArrowDown className="h-6 w-6 animate-bounce text-teal-500 dark:text-teal-400" />
         </motion.div>
       </section>
 
@@ -454,14 +452,14 @@ export default function Portfolio() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="group hover:shadow-xl h-[500px] transition-all duration-300 border-muted hover:border-teal-500/50 dark:hover:border-teal-400/50">
+                  <Card className="group h-full flex flex-col hover:shadow-xl transition-all duration-300 border-muted hover:border-teal-500/50 dark:hover:border-teal-400/50">
                     <div className="relative overflow-hidden">
                       <Image
                         src={project?.image || "/nik.jpg"}
                         alt={project.title}
                         height={200}
-                        width={200}
-                        className="object-cover w-full h-80 transition-transform duration-300 group-hover:scale-105"
+                        width={400}
+                        className="object-fit w-full h-56 sm:h-64 md:h-72 lg:h-96 transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute bottom-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -485,13 +483,15 @@ export default function Portfolio() {
                         </Button>
                       </div>
                     </div>
+
                     <CardHeader>
                       <CardTitle className="text-xl">{project.title}</CardTitle>
-                      <CardDescription className="min-h-[50px]">
+                      <CardDescription className="min-h-[60px]">
                         {project.description}
                       </CardDescription>
                     </CardHeader>
-                    <CardContent>
+
+                    <CardContent className="mt-auto">
                       <div className="flex flex-wrap gap-2">
                         {project.tech.map((tech) => (
                           <Badge
@@ -607,7 +607,7 @@ export default function Portfolio() {
                     className="hover:bg-teal-500/10 hover:border-teal-500 dark:hover:bg-teal-400/10 dark:hover:border-teal-400"
                   >
                     <Link
-                      href="www.linkedin.com/in/naitik-koladiya-15a33b236"
+                      href="https://www.linkedin.com/in/naitik-koladiya-15a33b236/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
