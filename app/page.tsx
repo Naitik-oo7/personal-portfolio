@@ -155,25 +155,25 @@ export default function Portfolio() {
       description:
         "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
       tech: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-      image: "/nik.jpg",
+      image: "/ecommerce.png",
       demo: "#",
       github: "#",
     },
     {
-      title: "Task Management App",
+      title: "Anime Application",
       description:
         "Collaborative task management application with real-time updates using Socket.io and React. Includes drag-and-drop functionality.",
       tech: ["React", "Socket.io", "Node.js", "PostgreSQL"],
-      image: "/nik.jpg",
+      image: "/anime.png",
       demo: "#",
       github: "#",
     },
     {
-      title: "Social Media Dashboard",
+      title: "Twitter Application",
       description:
         "Analytics dashboard for social media management with data visualization and automated reporting features.",
       tech: ["React", "GraphQL", "Node.js", "MongoDB", "Chart.js"],
-      image: "/nik.jpg",
+      image: "/twitter.png",
       demo: "#",
       github: "#",
     },
@@ -182,7 +182,7 @@ export default function Portfolio() {
       description:
         "Modern weather application with location-based forecasts, interactive maps, and responsive design.",
       tech: ["React", "REST API", "CSS3", "JavaScript"],
-      image: "/nik.jpg",
+      image: "/weather.png",
       demo: "#",
       github: "#",
     },
@@ -454,14 +454,14 @@ export default function Portfolio() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="group hover:shadow-xl transition-all duration-300 border-muted hover:border-teal-500/50 dark:hover:border-teal-400/50">
+                  <Card className="group hover:shadow-xl h-[500px] transition-all duration-300 border-muted hover:border-teal-500/50 dark:hover:border-teal-400/50">
                     <div className="relative overflow-hidden">
                       <Image
-                        src={project.image || "/nik.jpg"}
+                        src={project?.image || "/nik.jpg"}
                         alt={project.title}
                         height={200}
                         width={200}
-                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="object-cover w-full h-80 transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute bottom-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -487,7 +487,9 @@ export default function Portfolio() {
                     </div>
                     <CardHeader>
                       <CardTitle className="text-xl">{project.title}</CardTitle>
-                      <CardDescription>{project.description}</CardDescription>
+                      <CardDescription className="min-h-[50px]">
+                        {project.description}
+                      </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="flex flex-wrap gap-2">
