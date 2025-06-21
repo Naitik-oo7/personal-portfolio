@@ -390,10 +390,12 @@ export default function Portfolio() {
                   projects, learn from experienced developers, and grow within
                   the dynamic world of web development.
                 </p>
-                <Button className="bg-teal-500 hover:bg-teal-600 dark:bg-teal-500 dark:hover:bg-teal-600 text-white">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Resume
-                </Button>
+                <a href="/Naitik-Koladiya.pdf" download>
+                  <Button className="bg-teal-500 hover:bg-teal-600 dark:bg-teal-500 dark:hover:bg-teal-600 text-white">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Resume
+                  </Button>
+                </a>
               </div>
 
               <div className="space-y-4">
