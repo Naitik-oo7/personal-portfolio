@@ -157,8 +157,8 @@ export default function Portfolio() {
         "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
       tech: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
       image: "/ecommerce.png",
-      demo: "#",
-      github: "#",
+      // demo: "#",
+      // github: "#",
     },
     {
       title: "Anime Application",
@@ -166,8 +166,8 @@ export default function Portfolio() {
         "Collaborative task management application with real-time updates using Socket.io and React. Includes drag-and-drop functionality.",
       tech: ["React", "Socket.io", "Node.js", "PostgreSQL"],
       image: "/anime.png",
-      demo: "#",
-      github: "#",
+      // demo: "#",
+      // github: "#",
     },
     {
       title: "Twitter Application",
@@ -184,8 +184,8 @@ export default function Portfolio() {
         "Modern weather application with location-based forecasts, interactive maps, and responsive design.",
       tech: ["React", "REST API", "CSS3", "JavaScript"],
       image: "/weather.png",
-      demo: "#",
-      github: "#",
+      // demo: "#",
+      // github: "#",
     },
   ];
 
