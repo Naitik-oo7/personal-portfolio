@@ -175,8 +175,8 @@ export default function Portfolio() {
         "Analytics dashboard for social media management with data visualization and automated reporting features.",
       tech: ["React", "GraphQL", "Node.js", "MongoDB", "Chart.js"],
       image: "/twitter.png",
-      demo: "#",
-      github: "#",
+      demo: "https://twitter-clone-1cxk.onrender.com/",
+      github: "https://github.com/Naitik-oo7/twitter-clone",
     },
     {
       title: "Weather App",
